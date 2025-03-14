@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="500" fill="#f8f8f8" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">Cybernetic Architecture for AGI Systems</text>
+  
+  <!-- System Container -->
+  <rect x="50" y="60" width="500" height="390" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="5,3" rx="10" ry="10"/>
+  
+  <!-- Environment -->
+  <rect x="20" y="50" width="560" height="420" fill="none" stroke="#333" stroke-width="1" stroke-dasharray="2,2" rx="15" ry="15"/>
+  <text x="300" y="475" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Environment</text>
+  
+  <!-- Perception Layer -->
+  <rect x="100" y="100" width="400" height="60" fill="#ffffff" stroke="#3a7bd5" stroke-width="2" rx="10" ry="10"/>
+  <text x="300" y="125" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#3a7bd5">Perception Layer</text>
+  <text x="300" y="145" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#555">Sensors and Information Processing</text>
+  
+  <!-- Feedback/Control System Layer -->
+  <rect x="100" y="190" width="400" height="80" fill="#ffffff" stroke="#00cc99" stroke-width="2" rx="10" ry="10"/>
+  <text x="300" y="215" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#00cc99">Feedback Control System</text>
+  <text x="300" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#555">Multiple Nested Control Loops</text>
+  <text x="300" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#555">Homeostatic Regulators</text>
+  
+  <!-- Value System -->
+  <rect x="180" y="300" width="100" height="60" fill="#ffffff" stroke="#b02b2c" stroke-width="2" rx="10" ry="10"/>
+  <text x="230" y="325" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#b02b2c">Value System</text>
+  <text x="230" y="345" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#555">Algedonic Signals</text>
+  
+  <!-- Self-Model -->
+  <rect x="320" y="300" width="100" height="60" fill="#ffffff" stroke="#8e44ad" stroke-width="2" rx="10" ry="10"/>
+  <text x="370" y="325" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#8e44ad">Self-Model</text>
+  <text x="370" y="345" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#555">Second-Order Observation</text>
+  
+  <!-- Action System -->
+  <rect x="100" y="380" width="400" height="50" fill="#ffffff" stroke="#e67e22" stroke-width="2" rx="10" ry="10"/>
+  <text x="300" y="410" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#e67e22">Action System</text>
+  
+  <!-- Feedback Loops -->
+  <!-- From Environment to Perception -->
+  <path d="M 30,230 C 10,230 10,130 90,130" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="40" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#555" transform="rotate(-90 40 180)">Information</text>
+  
+  <!-- From Action to Environment -->
+  <path d="M 530,405 C 550,405 550,300 570,300" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="560" y="350" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#555" transform="rotate(90 560 350)">Actions</text>
+  
+  <!-- Internal Feedback Loops -->
+  <!-- From Perception to Control -->
+  <path d="M 300,160 L 300,190" fill="none" stroke="#3a7bd5" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- From Control to Value and Self-Model -->
+  <path d="M 230,270 L 230,300" fill="none" stroke="#00cc99" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 370,270 L 370,300" fill="none" stroke="#00cc99" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- From Value and Self-Model to Action -->
+  <path d="M 230,360 L 230,380" fill="none" stroke="#b02b2c" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 370,360 L 370,380" fill="none" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Recurrent Connections -->
+  <path d="M 230,300 C 210,290 210,250 230,240" fill="none" stroke="#b02b2c" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrowhead)"/>
+  <path d="M 370,300 C 390,290 390,250 370,240" fill="none" stroke="#8e44ad" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Human Control Channel -->
+  <path d="M 300,20 L 300,100" fill="none" stroke="#27ae60" stroke-width="3" stroke-dasharray="6,3" marker-end="url(#arrowhead)"/>
+  <text x="310" y="60" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#27ae60">Human Control Channel</text>
+  
+  <!-- Arrow Definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Layer Labels -->
+  <text x="70" y="130" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#333">Input</text>
+  <text x="70" y="230" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#333">Processing</text>
+  <text x="70" y="330" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#333">Evaluation</text>
+  <text x="70" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#333">Output</text>
+  
+  <!-- Recursive Self-Improvement Loop -->
+  <path d="M 100,330 C 80,330 80,150 100,150" fill="none" stroke="#8e44ad" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="60" y="240" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#8e44ad" transform="rotate(-90 60 240)">Recursive Self-Improvement</text>
+</svg>

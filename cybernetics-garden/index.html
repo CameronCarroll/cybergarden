@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A digital garden exploring cybernetics, systems theory, and their applications in AI and beyond">
+    <title>Cybernetics Digital Garden</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cybernetics Digital Garden</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/principles.html">Principles</a></li>
+                    <li><a href="pages/history.html">History</a></li>
+                    <li><a href="pages/neural-models.html">Neural Models</a></li>
+                    <li><a href="pages/applications.html">Applications</a></li>
+                    <li><a href="pages/agi.html">AGI</a></li>
+                    <li><a href="resources/index.html">Resources</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="intro">
+                <h2>Exploring Cybernetics</h2>
+                <p>Welcome to the Cybernetics Digital Garden, a place to explore the rich interdisciplinary field of cybernetics and its connections to modern artificial intelligence, systems theory, and control systems.</p>
+                <p>Cybernetics, coined by Norbert Wiener in the 1940s, is the study of regulatory systems, their structures, constraints, and possibilities. This digital garden is designed to provide an accessible entry point to cybernetic concepts, history, and applications.</p>
+                <blockquote>
+                    "Cybernetics is the science of control and communication, in the animal and the machine." — Norbert Wiener
+                </blockquote>
+            </section>
+
+            <section id="section-summaries">
+                <div class="card">
+                    <h3>Core Principles</h3>
+                    <p>Explore the fundamental concepts of feedback loops, homeostasis, and self-regulation that form the foundation of cybernetic thinking.</p>
+                    <a href="pages/principles.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Historical Development</h3>
+                    <p>Trace the evolution of cybernetics from its birth in the mid-20th century through the Macy Conferences to its influence on modern complex systems analysis.</p>
+                    <a href="pages/history.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Neural Models</h3>
+                    <p>Understand the connections between early cybernetic neural models and today's deep learning architectures.</p>
+                    <a href="pages/neural-models.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Real-world Applications</h3>
+                    <p>Discover how cybernetic principles are applied in fields ranging from robotics and AI to ecology and organizational management.</p>
+                    <a href="pages/applications.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>AGI Perspectives</h3>
+                    <p>Examine how cybernetic approaches inform our understanding of artificial general intelligence and intelligence augmentation.</p>
+                    <a href="pages/agi.html" class="read-more">Read more →</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cybernetics Digital Garden | <a href="resources/index.html">Resources</a></p>
+        </div>
+    </footer>
+
+    <!-- Secondary script load to handle DOM events after content is loaded -->
+    <script>
+        // The main script is already loaded in the head for immediate theme application
+        if (window.mainScriptLoaded) {
+            console.log("Main script already processed");
+        } else {
+            // In case the script in head failed for some reason
+            console.log("Loading main script again");
+            const script = document.createElement('script');
+            script.src = "js/main.js";
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>

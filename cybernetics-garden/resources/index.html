@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resources and further reading on cybernetics, systems theory, and their applications">
+    <title>Resources | Cybernetics Digital Garden</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cybernetics Digital Garden</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/principles.html">Principles</a></li>
+                    <li><a href="../pages/history.html">History</a></li>
+                    <li><a href="../pages/neural-models.html">Neural Models</a></li>
+                    <li><a href="../pages/applications.html">Applications</a></li>
+                    <li><a href="../pages/agi.html">AGI</a></li>
+                    <li><a href="index.html">Resources</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="../index.html">Home</a></li>
+                <li>Resources</li>
+            </ul>
+
+            <section>
+                <h2>Resources and Further Reading</h2>
+                <p>This page collects valuable resources for exploring cybernetics, from foundational texts to contemporary research, tools, and communities.</p>
+                
+                <div class="resources-filters">
+                    <input type="text" id="resource-search" placeholder="Search resources...">
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="book">Books</option>
+                        <option value="paper">Papers</option>
+                        <option value="website">Websites</option>
+                        <option value="video">Videos</option>
+                        <option value="software">Software</option>
+                        <option value="community">Communities</option>
+                    </select>
+                </div>
+                
+                <h3>Foundational Texts</h3>
+                <ul class="resources-list">
+                    <li class="resource-item" data-category="book">
+                        <h4>Cybernetics: Or Control and Communication in the Animal and the Machine</h4>
+                        <p><strong>Author:</strong> Norbert Wiener (1948)</p>
+                        <p>The seminal work that established cybernetics as a field, exploring the parallels between biological and mechanical feedback systems.</p>
+                        <a href="https://www.goodreads.com/book/show/230237.Cybernetics" target="_blank">More information →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="book">
+                        <h4>An Introduction to Cybernetics</h4>
+                        <p><strong>Author:</strong> W. Ross Ashby (1956)</p>
+                        <p>A classic introduction to cybernetic principles, including the Law of Requisite Variety. Available freely online.</p>
+                        <a href="http://pespmc1.vub.ac.be/ASHBBOOK.html" target="_blank">Read online →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="book">
+                        <h4>The Human Use of Human Beings: Cybernetics and Society</h4>
+                        <p><strong>Author:</strong> Norbert Wiener (1950)</p>
+                        <p>Wiener's exploration of the social and ethical implications of cybernetics, written for a general audience.</p>
+                        <a href="https://www.goodreads.com/book/show/230230.The_Human_Use_of_Human_Beings" target="_blank">More information →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="book">
+                        <h4>Brain of the Firm</h4>
+                        <p><strong>Author:</strong> Stafford Beer (1972)</p>
+                        <p>Introduces the Viable System Model, applying cybernetic principles to organizational management.</p>
+                        <a href="https://www.goodreads.com/book/show/1304285.Brain_of_the_Firm" target="_blank">More information →</a>
+                    </li>
+                </ul>
+                
+                <h3>Contemporary Books</h3>
+                <ul class="resources-list">
+                    <li class="resource-item" data-category="book">
+                        <h4>How We Became Posthuman</h4>
+                        <p><strong>Author:</strong> N. Katherine Hayles (1999)</p>
+                        <p>Examines the cultural and technological evolution of cybernetics and its influence on our understanding of human identity.</p>
+                        <a href="https://www.goodreads.com/book/show/395561.How_We_Became_Posthuman" target="_blank">More information →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="book">
+                        <h4>The Cybernetic Brain</h4>
+                        <p><strong>Author:</strong> Andrew Pickering (2010)</p>
+                        <p>Explores the history of British cybernetics and its unique approach to understanding cognition and the mind.</p>
+                        <a href="https://www.goodreads.com/book/show/9732269-the-cybernetic-brain" target="_blank">More information →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="book">
+                        <h4>Neocybernetics and Narrative</h4>
+                        <p><strong>Author:</strong> Bruce Clarke (2014)</p>
+                        <p>Examines second-order cybernetics in relation to narrative theory and contemporary media systems.</p>
+                        <a href="https://www.goodreads.com/book/show/20695043-neocybernetics-and-narrative" target="_blank">More information →</a>
+                    </li>
+                </ul>
+                
+                <h3>Key Papers and Articles</h3>
+                <ul class="resources-list">
+                    <li class="resource-item" data-category="paper">
+                        <h4>A Logical Calculus of the Ideas Immanent in Nervous Activity</h4>
+                        <p><strong>Authors:</strong> Warren McCulloch and Walter Pitts (1943)</p>
+                        <p>The foundational paper describing the first mathematical model of a neuron, laying groundwork for both cybernetics and neural networks.</p>
+                        <a href="https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf" target="_blank">Read paper →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="paper">
+                        <h4>A Framework for Representing Knowledge</h4>
+                        <p><strong>Author:</strong> Marvin Minsky (1974)</p>
+                        <p>Introduces the concept of frames for knowledge representation, influenced by cybernetic thinking about mental models.</p>
+                        <a href="https://web.media.mit.edu/~minsky/papers/Frames/frames.html" target="_blank">Read paper →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="paper">
+                        <h4>Homeostats: The Forgotten Cybernetic Machines</h4>
+                        <p><strong>Author:</strong> Peter Asaro (2006)</p>
+                        <p>Examines Ashby's homeostat devices and their significance for cybernetics and AI.</p>
+                        <a href="https://www.academia.edu/1041555/Ashbys_Homeostats_Cybernetic_Machines" target="_blank">Read paper →</a>
+                    </li>
+                </ul>
+                
+                <h3>Online Resources</h3>
+                <ul class="resources-list">
+                    <li class="resource-item" data-category="website">
+                        <h4>The Cybernetics Society</h4>
+                        <p>Organization promoting cybernetics and its applications, with resources, publications, and conference information.</p>
+                        <a href="https://www.cybsoc.org/" target="_blank">Visit website →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="website">
+                        <h4>American Society for Cybernetics</h4>
+                        <p>Scholarly society dedicated to the advancement of cybernetics, with resources and publications.</p>
+                        <a href="https://www.asc-cybernetics.org/" target="_blank">Visit website →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="website">
+                        <h4>Principia Cybernetica</h4>
+                        <p>A collaborative project developing a comprehensive cybernetic philosophy, with extensive resources on systems theory.</p>
+                        <a href="http://pespmc1.vub.ac.be/" target="_blank">Visit website →</a>
+                    </li>
+                </ul>
+                
+                <h3>Videos and Lectures</h3>
+                <ul class="resources-list">
+                    <li class="resource-item" data-category="video">
+                        <h4>The Limits of Computation</h4>
+                        <p><strong>Speaker:</strong> Ross Ashby</p>
+                        <p>Rare archival footage of Ross Ashby lecturing on cybernetics and computation.</p>
+                        <a href="https://www.youtube.com/watch?v=sCwU3UeKuGQ" target="_blank">Watch video →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="video">
+                        <h4>Cybernetics & the Architecture of Performance</h4>
+                        <p><strong>Speaker:</strong> Ranulph Glanville</p>
+                        <p>Lecture on second-order cybernetics and its implications for design and architecture.</p>
+                        <a href="https://www.youtube.com/watch?v=iq-F0UCvpfA" target="_blank">Watch video →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="video">
+                        <h4>All Watched Over By Machines of Loving Grace</h4>
+                        <p><strong>Creator:</strong> Adam Curtis (2011)</p>
+                        <p>BBC documentary series examining the influence of cybernetic ideas on contemporary society and politics.</p>
+                        <a href="https://www.dailymotion.com/video/x2eagvs" target="_blank">Watch series →</a>
+                    </li>
+                </ul>
+                
+                <h3>Software Tools</h3>
+                <ul class="resources-list">
+                    <li class="resource-item" data-category="software">
+                        <h4>NetLogo</h4>
+                        <p>Multi-agent programmable modeling environment suitable for simulating complex systems with feedback mechanisms.</p>
+                        <a href="https://ccl.northwestern.edu/netlogo/" target="_blank">Download →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="software">
+                        <h4>Vensim</h4>
+                        <p>System dynamics simulation software for modeling complex feedback systems.</p>
+                        <a href="https://vensim.com/" target="_blank">Learn more →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="software">
+                        <h4>PyBrain</h4>
+                        <p>Python library for neural networks with reinforcement learning capabilities, useful for implementing cybernetic principles.</p>
+                        <a href="http://pybrain.org/" target="_blank">Documentation →</a>
+                    </li>
+                </ul>
+                
+                <h3>Communities and Forums</h3>
+                <ul class="resources-list">
+                    <li class="resource-item" data-category="community">
+                        <h4>r/Cybernetics</h4>
+                        <p>Reddit community discussing cybernetic principles, history, and applications.</p>
+                        <a href="https://www.reddit.com/r/cybernetics/" target="_blank">Join discussion →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="community">
+                        <h4>Systems Thinking World</h4>
+                        <p>LinkedIn group focused on systems thinking, cybernetics, and related disciplines.</p>
+                        <a href="https://www.linkedin.com/groups/2639211/" target="_blank">Join group →</a>
+                    </li>
+                    
+                    <li class="resource-item" data-category="community">
+                        <h4>MetaCAugs</h4>
+                        <p>Cybernetics and systems thinking mailing list maintained by the American Society for Cybernetics.</p>
+                        <a href="https://www.asc-cybernetics.org/page-18060" target="_blank">Join mailing list →</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cybernetics Digital Garden | <a href="index.html">Resources</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

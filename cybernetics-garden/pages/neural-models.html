@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evolution of neural models in cybernetics and their connection to modern deep learning">
+    <title>Neural Models | Cybernetics Digital Garden</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cybernetics Digital Garden</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="principles.html">Principles</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="neural-models.html">Neural Models</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="agi.html">AGI</a></li>
+                    <li><a href="../resources/index.html">Resources</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="../index.html">Home</a></li>
+                <li>Neural Models</li>
+            </ul>
+
+            <section>
+                <h2>Neural Models in Cybernetics</h2>
+                <p>The intertwined history of cybernetics and neural networks reveals how early cybernetic principles laid the groundwork for today's deep learning revolution. From the earliest formal models of neurons to contemporary artificial neural networks, cybernetic thinking has profoundly shaped our approach to creating computational systems inspired by the brain.</p>
+                
+                <h3>Early Neural Models: The McCulloch-Pitts Neuron</h3>
+                <div class="card">
+                    <h4>The First Mathematical Model of a Neuron (1943)</h4>
+                    <p>In 1943, neurophysiologist Warren McCulloch and logician Walter Pitts published "A Logical Calculus of the Ideas Immanent in Nervous Activity," introducing the first mathematical model of a neuron. This paper, deeply connected to the emerging cybernetic movement, proposed that neural events and their relations could be treated as logical propositions.</p>
+                    <p>The McCulloch-Pitts neuron was characterized by:</p>
+                    <ul>
+                        <li>Binary threshold activation (on/off)</li>
+                        <li>Multiple inputs with fixed weights</li>
+                        <li>Ability to perform logical operations (AND, OR, NOT)</li>
+                        <li>No learning capability (weights were fixed)</li>
+                    </ul>
+                    <p>This model demonstrated that networks of simple neuron-like elements could, in principle, compute any logical function, laying the theoretical foundation for neural computation.</p>
+                    
+                    <pre><code>// Simplified pseudo-code for a McCulloch-Pitts neuron
+function mcCullochPittsNeuron(inputs, weights, threshold) {
+  let sum = 0;
+  for (let i = 0; i < inputs.length; i++) {
+    sum += inputs[i] * weights[i];
+  }
+  return sum >= threshold ? 1 : 0; // Binary activation
+}</code></pre>
+                </div>
+                
+                <h3>The Perceptron: Adding Learning</h3>
+                <p>In 1958, Frank Rosenblatt extended the McCulloch-Pitts model by introducing the perceptron, a neural network that could learn from data. This marked a critical advancement in cybernetic systems:</p>
+                <ul>
+                    <li>Implemented a simple learning algorithm to adjust weights</li>
+                    <li>Could learn to classify linearly separable patterns</li>
+                    <li>Demonstrated adaptation through feedback</li>
+                    <li>Represented a system that could improve through experience</li>
+                </ul>
+                <p>Rosenblatt's work embodied cybernetic principles of feedback and adaptation, showing how simple computational elements could learn from their environment.</p>
+                
+                <h3>Cybernetic Perspectives on Neural Learning</h3>
+                <p>Cybernetics provided key conceptual frameworks for understanding neural learning:</p>
+                <div class="card">
+                    <h4>Hebbian Learning</h4>
+                    <p>Donald Hebb's 1949 principle that "neurons that fire together, wire together" provided a biological basis for learning in neural systems. This principle influenced countless neural network architectures and learning rules.</p>
+                    <p>From a cybernetic perspective, Hebbian learning represents a self-organizing process where the system modifies its own structure based on feedback from its activity, without external supervision.</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Adaptive Resonance Theory</h4>
+                    <p>Stephen Grossberg's work on Adaptive Resonance Theory (ART) in the 1970s addressed the "stability-plasticity dilemma" - how a system can remain adaptive (plastic) to new information while preserving stability for existing knowledge.</p>
+                    <p>This cybernetic approach to neural learning emphasized complementary feedback loops that maintained equilibrium between adaptation and stability.</p>
+                </div>
+                
+                <h3>The Connectionist Revolution and Cybernetic Principles</h3>
+                <p>The revival of neural network research in the 1980s, known as connectionism, drew heavily on cybernetic principles:</p>
+                <ul>
+                    <li>Distributed representation of information across networks</li>
+                    <li>Emphasis on emergent properties from local interactions</li>
+                    <li>Self-organization through learning algorithms</li>
+                    <li>Parallel processing of information</li>
+                    <li>Robustness through redundancy</li>
+                </ul>
+                
+                <figure class="diagram">
+                    <img src="../assets/img/neural-network-diagram.svg" alt="Diagram showing the evolution from McCulloch-Pitts neuron to modern deep learning">
+                    <figcaption>Fig 1: Evolution of neural network models from cybernetic principles to modern architectures</figcaption>
+                </figure>
+                
+                <h3>From Cybernetic Models to Modern Deep Learning</h3>
+                <p>Today's deep learning systems owe much to their cybernetic roots:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cybernetic Principle</th>
+                            <th>Implementation in Modern Deep Learning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Feedback loops</td>
+                            <td>Recurrent neural networks, backpropagation</td>
+                        </tr>
+                        <tr>
+                            <td>Self-regulation</td>
+                            <td>Normalization techniques, adaptive learning rates</td>
+                        </tr>
+                        <tr>
+                            <td>Adaptation to environment</td>
+                            <td>Reinforcement learning, transfer learning</td>
+                        </tr>
+                        <tr>
+                            <td>Information processing</td>
+                            <td>Attention mechanisms, information bottlenecks</td>
+                        </tr>
+                        <tr>
+                            <td>Emergent complexity</td>
+                            <td>Deep architectures, feature hierarchies</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Beyond Feed-Forward: Cybernetic Principles in Advanced Neural Architectures</h3>
+                <p>Modern neural network designs that explicitly incorporate cybernetic principles include:</p>
+                <ul>
+                    <li><strong>Recurrent Neural Networks (RNNs):</strong> Implement feedback loops allowing information to persist</li>
+                    <li><strong>Long Short-Term Memory (LSTM):</strong> Use gating mechanisms to regulate information flow</li>
+                    <li><strong>Attention Mechanisms:</strong> Dynamically allocate computational resources based on relevance</li>
+                    <li><strong>Generative Adversarial Networks (GANs):</strong> Employ competitive feedback between generator and discriminator</li>
+                    <li><strong>Transformers:</strong> Implement self-attention for complex dependency modeling</li>
+                </ul>
+                
+                <h3>The Future: Neuro-inspired Cybernetic Systems</h3>
+                <p>Emerging research directions that continue the cybernetics-neural networks connection include:</p>
+                <ul>
+                    <li>Neuromorphic computing architectures</li>
+                    <li>Self-modifying neural networks</li>
+                    <li>Neural-symbolic integration</li>
+                    <li>Distributed and decentralized learning systems</li>
+                    <li>Brain-machine interfaces informed by cybernetic principles</li>
+                </ul>
+                
+                <p>The ongoing dialogue between cybernetics and neural network research continues to generate insights into both biological and artificial intelligence, maintaining the transdisciplinary spirit that characterized the early days of cybernetics.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cybernetics Digital Garden | <a href="../resources/index.html">Resources</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

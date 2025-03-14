@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Core principles of cybernetics including feedback loops, homeostasis, and self-regulation">
+    <title>Core Principles | Cybernetics Digital Garden</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cybernetics Digital Garden</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="principles.html">Principles</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="neural-models.html">Neural Models</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="agi.html">AGI</a></li>
+                    <li><a href="../resources/index.html">Resources</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="../index.html">Home</a></li>
+                <li>Core Principles</li>
+            </ul>
+
+            <section>
+                <h2>Core Principles of Cybernetics</h2>
+                <p>Cybernetics, at its essence, is concerned with understanding how systems regulate themselves, evolve, and communicate. The field combines insights from control theory, information theory, biology, and cognitive science to develop a unified approach to systems that process information and adapt to their environments.</p>
+                
+                <h3>Feedback Loops</h3>
+                <p>The concept of feedback is fundamental to cybernetics. Feedback loops allow systems to adjust their behavior based on the outcomes of their actions.</p>
+                
+                <div class="card">
+                    <h4>Negative Feedback</h4>
+                    <p>In negative feedback systems, deviations from a desired state trigger corrective actions that bring the system back toward that state. This mechanism is crucial for maintaining stability and homeostasis.</p>
+                    <p><strong>Example:</strong> A thermostat that turns on heating when temperature drops below a set point and turns it off when temperature exceeds the set point.</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Positive Feedback</h4>
+                    <p>Positive feedback amplifies deviations, potentially leading to rapid change, growth, or collapse. While often destabilizing, positive feedback can be essential for learning, evolution, and phase transitions in systems.</p>
+                    <p><strong>Example:</strong> Population growth where more individuals lead to more reproduction, further increasing the population size.</p>
+                </div>
+                
+                <figure class="diagram">
+                    <img src="../assets/img/feedback-loop-diagram.svg" alt="Diagram showing negative and positive feedback loops">
+                    <figcaption>Fig 1: Negative and positive feedback loops in cybernetic systems</figcaption>
+                </figure>
+                
+                <h3>Homeostasis</h3>
+                <p>Homeostasis refers to a system's ability to maintain internal stability and equilibrium through regulatory mechanisms. This concept, borrowed from biology, is central to understanding how complex systems persist despite environmental changes.</p>
+                <p>Cybernetic systems use feedback loops to achieve homeostasis by:</p>
+                <ul>
+                    <li>Detecting deviations from optimal states</li>
+                    <li>Initiating corrective actions</li>
+                    <li>Monitoring the effects of those actions</li>
+                    <li>Adjusting responses as needed</li>
+                </ul>
+                
+                <h3>Variety and the Law of Requisite Variety</h3>
+                <p>W. Ross Ashby's Law of Requisite Variety states that "only variety can absorb variety." This means that for a system to be effective at regulating another system, it must have at least as much variety (possible states) as the system it's regulating.</p>
+                <p>This principle has profound implications for:</p>
+                <ul>
+                    <li>Control systems design</li>
+                    <li>Organizational management</li>
+                    <li>AI and adaptive systems</li>
+                    <li>Biological evolution</li>
+                </ul>
+                
+                <pre><code>// Simplified pseudo-code for a homeostatic system
+function regulateSystem(current, target, tolerance) {
+  while (Math.abs(current - target) > tolerance) {
+    if (current < target) {
+      // Increase variable
+      current += computeAdjustment(target - current);
+    } else {
+      // Decrease variable
+      current -= computeAdjustment(current - target);
+    }
+    // Monitor and reassess
+    current = measureCurrentState();
+  }
+  return current;
+}</code></pre>
+                
+                <h3>Self-Organization</h3>
+                <p>Cybernetics explores how order emerges spontaneously in complex systems through local interactions without centralized control. Self-organization challenges traditional top-down views of system design and control.</p>
+                <p>Key aspects include:</p>
+                <ul>
+                    <li>Emergence of global patterns from local interactions</li>
+                    <li>Adaptation to environmental changes</li>
+                    <li>Resilience through distributed control</li>
+                    <li>Information processing at multiple levels</li>
+                </ul>
+                
+                <h3>Circularity and Recursion</h3>
+                <p>Cybernetic systems often exhibit circular causality, where effects feed back to become causes. This recursive nature creates complex dynamics that challenge linear thinking and conventional notions of cause and effect.</p>
+                <p>This principle is evident in:</p>
+                <ul>
+                    <li>Neural networks and brain function</li>
+                    <li>Ecosystems and food webs</li>
+                    <li>Social systems and institutions</li>
+                    <li>Algorithmic recursion in computation</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cybernetics Digital Garden | <a href="../resources/index.html">Resources</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
