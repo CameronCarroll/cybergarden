@@ -6,24 +6,87 @@
     <meta name="description" content="A digital garden exploring cybernetics, systems theory, and their applications in AI and beyond">
     <title>Cybernetics Digital Garden</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Load script in head for immediate theme application -->
     <script src="js/main.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Cybernetics Digital Garden</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="pages/principles.html">Principles</a></li>
-                    <li><a href="pages/history.html">History</a></li>
-                    <li><a href="pages/neural-models.html">Neural Models</a></li>
-                    <li><a href="pages/applications.html">Applications</a></li>
-                    <li><a href="pages/agi.html">AGI</a></li>
-                    <li><a href="resources/index.html">Resources</a></li>
-                </ul>
-            </nav>
-            <button id="theme-toggle">🌓</button>
+            <div class="logo-container">
+                <h1>Cybernetics Digital Garden</h1>
+                <button id="theme-toggle">🌓</button>
+            </div>
+            
+            <div class="nav-container">
+                <button id="hamburger-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul class="nav-menu">
+                        <!-- 1. Introduction -->
+                        <li class="menu-category">
+                            <span class="category-title">Introduction</span>
+                            <ul class="submenu">
+                                <li><a href="index.html" class="active">Home/Overview</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- 2. Foundations -->
+                        <li class="menu-category">
+                            <span class="category-title">Foundations</span>
+                            <ul class="submenu">
+                                <li><a href="pages/historical-evolution.html">Historical Evolution</a></li>
+                                <li><a href="pages/foundations.html">Core Principles</a></li>
+                                <li><a href="pages/information-theory.html">Information Theory</a></li>
+                                <li><a href="pages/systems-theory.html">Systems Theory</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- 3. Human Dimensions -->
+                        <li class="menu-category">
+                            <span class="category-title">Human Dimensions</span>
+                            <ul class="submenu">
+                                <li><a href="pages/cognitive-cybernetics.html">Cognitive Cybernetics</a></li>
+                                <li><a href="pages/social-cybernetics.html">Social Cybernetics</a></li>
+                                <li><a href="pages/philosophical-extensions.html">Philosophical Extensions</a></li>
+                                <li><a href="pages/ethical-societal-implications.html">Ethical & Societal Implications</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- 4. Technology Integration -->
+                        <li class="menu-category">
+                            <span class="category-title">Technology Integration</span>
+                            <ul class="submenu">
+                                <li><a href="pages/ai-cybernetic-lens.html">AI Through Cybernetic Lens</a></li>
+                                <li><a href="pages/ai-alignment-safety.html">AI Alignment & Safety</a></li>
+                                <li><a href="pages/computational-cybernetics.html">Computational Cybernetics</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- 5. Applied Cybernetics -->
+                        <li class="menu-category">
+                            <span class="category-title">Applied Cybernetics</span>
+                            <ul class="submenu">
+                                <li><a href="pages/embodied-cybernetics.html">Embodied Cybernetics</a></li>
+                                <li><a href="pages/ecological-cybernetics.html">Ecological Cybernetics</a></li>
+                                <li><a href="pages/applications.html">Applications & Case Studies</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- 6. Forward Looking -->
+                        <li class="menu-category">
+                            <span class="category-title">Forward Looking</span>
+                            <ul class="submenu">
+                                <li><a href="pages/future-directions.html">Future Directions</a></li>
+                                <li><a href="resources/index.html">Resources</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -40,33 +103,93 @@
 
             <section id="section-summaries">
                 <div class="card">
-                    <h3>Core Principles</h3>
-                    <p>Explore the fundamental concepts of feedback loops, homeostasis, and self-regulation that form the foundation of cybernetic thinking.</p>
-                    <a href="pages/principles.html" class="read-more">Read more →</a>
+                    <h3>Historical Evolution and Convergence</h3>
+                    <p>Explore the intertwined history of cybernetics and artificial intelligence, from their shared origins at the Macy Conferences through divergence and modern re-convergence.</p>
+                    <a href="pages/historical-evolution.html" class="read-more">Read more →</a>
                 </div>
 
                 <div class="card">
-                    <h3>Historical Development</h3>
-                    <p>Trace the evolution of cybernetics from its birth in the mid-20th century through the Macy Conferences to its influence on modern complex systems analysis.</p>
-                    <a href="pages/history.html" class="read-more">Read more →</a>
+                    <h3>Foundations of Cybernetics</h3>
+                    <p>Examine the fundamental principles of cybernetics including feedback loops, homeostasis, and self-regulation that form the intellectual cornerstone of the field.</p>
+                    <a href="pages/foundations.html" class="read-more">Read more →</a>
                 </div>
 
                 <div class="card">
-                    <h3>Neural Models</h3>
-                    <p>Understand the connections between early cybernetic neural models and today's deep learning architectures.</p>
-                    <a href="pages/neural-models.html" class="read-more">Read more →</a>
+                    <h3>Information Theory: Shannon to Transformers</h3>
+                    <p>Trace the evolution of information theory from Claude Shannon's mathematical framework to its modern applications in transformer models and large language models.</p>
+                    <a href="pages/information-theory.html" class="read-more">Read more →</a>
                 </div>
 
                 <div class="card">
-                    <h3>Real-world Applications</h3>
-                    <p>Discover how cybernetic principles are applied in fields ranging from robotics and AI to ecology and organizational management.</p>
+                    <h3>Systems Theory Integration</h3>
+                    <p>Discover how general systems theory, complex adaptive systems, and control theory provide powerful frameworks for understanding interconnected entities and their behaviors.</p>
+                    <a href="pages/systems-theory.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Cognitive Cybernetics</h3>
+                    <p>Investigate the connection between cybernetics and cognitive science, from neural models and predictive processing to mental models and consciousness studies.</p>
+                    <a href="pages/cognitive-cybernetics.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>AI Through a Cybernetic Lens</h3>
+                    <p>Understand how machine learning paradigms, transformer architectures, and large language models can be viewed through the framework of cybernetic principles.</p>
+                    <a href="pages/ai-cybernetic-lens.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>AI Alignment and Safety</h3>
+                    <p>Explore how cybernetic perspectives on control, homeostasis, and requisite variety provide valuable insights for addressing AI alignment and safety challenges.</p>
+                    <a href="pages/ai-alignment-safety.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Embodied Cybernetics</h3>
+                    <p>Learn about the application of cybernetic principles in robotics, human-machine interfaces, and synthetic biology, highlighting the importance of embodiment.</p>
+                    <a href="pages/embodied-cybernetics.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Social Cybernetics</h3>
+                    <p>Study how cybernetic principles can be applied to understanding social phenomena, from organizational management to digital social networks and communication dynamics.</p>
+                    <a href="pages/social-cybernetics.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Ecological Cybernetics</h3>
+                    <p>Investigate the application of cybernetic concepts to ecological systems, including environmental feedback mechanisms, sustainable design, and AI in environmental management.</p>
+                    <a href="pages/ecological-cybernetics.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Computational Cybernetics</h3>
+                    <p>Delve into information processing, complex systems simulation, and cybersecurity through the lens of cybernetic principles and computational frameworks.</p>
+                    <a href="pages/computational-cybernetics.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Philosophical Extensions</h3>
+                    <p>Consider the philosophical implications of cybernetics for epistemology, ethics, and metaphysics, exploring how cybernetic thinking reshapes our understanding of knowledge and reality.</p>
+                    <a href="pages/philosophical-extensions.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Ethical and Societal Implications</h3>
+                    <p>Examine the broader impact of cybernetics and AI on society, including human-AI symbiosis, bias and fairness considerations, socioeconomic effects, and governance challenges.</p>
+                    <a href="pages/ethical-societal-implications.html" class="read-more">Read more →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Applications & Case Studies</h3>
+                    <p>Discover practical applications of cybernetic principles across various domains including medicine, education, urban systems, and finance and economics.</p>
                     <a href="pages/applications.html" class="read-more">Read more →</a>
                 </div>
 
                 <div class="card">
-                    <h3>AGI Perspectives</h3>
-                    <p>Examine how cybernetic approaches inform our understanding of artificial general intelligence and intelligence augmentation.</p>
-                    <a href="pages/agi.html" class="read-more">Read more →</a>
+                    <h3>Future Directions</h3>
+                    <p>Look ahead to emerging frontiers in cybernetics including quantum cybernetics, neuro-inspired computing, AI-cybernetics convergence, and post-human cybernetics.</p>
+                    <a href="pages/future-directions.html" class="read-more">Read more →</a>
                 </div>
             </section>
         </div>
@@ -74,10 +197,14 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Cybernetics Digital Garden | <a href="resources/index.html">Resources</a></p>
+            <p>&copy; 2025 Cybernetics Digital Garden | <a href="resources/index.html">Resources</a></p> <br />
+            <p>Important notice: This website, including all information contained within, was "vibe coded" by using deep research LLMs and a 'council of LLMs' approach to verifying accuracy of information using Mar 2025 state-of-art commercial models.</p>
         </div>
     </footer>
 
+    <!-- Mobile menu backdrop -->
+    <div class="menu-backdrop"></div>
+    
     <!-- Secondary script load to handle DOM events after content is loaded -->
     <script>
         // The main script is already loaded in the head for immediate theme application

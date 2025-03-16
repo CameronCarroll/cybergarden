@@ -60,6 +60,104 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+ // ----- RESPONSIVE MENU SETUP -----
+ const hamburgerBtn = document.getElementById('hamburger-btn');
+ const mainNav = document.getElementById('main-nav');
+ const menuBackdrop = document.querySelector('.menu-backdrop');
+ 
+ // Toggle mobile menu (for mobile only)
+ if (hamburgerBtn) {
+     hamburgerBtn.addEventListener('click', function() {
+         mainNav.classList.toggle('active');
+         menuBackdrop.classList.toggle('active');
+         document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+     });
+ }
+ 
+ // Close menu when clicking outside (mobile only)
+ if (menuBackdrop) {
+     menuBackdrop.addEventListener('click', function() {
+         mainNav.classList.remove('active');
+         menuBackdrop.classList.remove('active');
+         document.body.style.overflow = '';
+     });
+ }
+ 
+ // Function to set up the click behavior for category titles
+ function setupMenuBehavior() {
+     // First, remove any existing click handlers by replacing elements
+     document.querySelectorAll('.category-title').forEach(title => {
+         const newTitle = title.cloneNode(true);
+         title.parentNode.replaceChild(newTitle, title);
+     });
+     
+     // Add fresh click handlers to the new elements
+     document.querySelectorAll('.category-title').forEach(title => {
+         title.addEventListener('click', function(e) {
+             // Check if we're in mobile or tablet mode
+             if (window.innerWidth <= 992) {
+                 e.preventDefault();
+                 
+                 const category = this.closest('.menu-category');
+                 const isActive = category.classList.contains('active');
+                 
+                 // Close all categories first
+                 document.querySelectorAll('.menu-category').forEach(cat => {
+                     cat.classList.remove('active');
+                 });
+                 
+                 // Toggle this category (only open if it wasn't already open)
+                 if (!isActive) {
+                     category.classList.add('active');
+                 }
+             }
+         });
+     });
+     
+     // Add document-wide click handler to close menus when clicking outside
+     // (but only in tablet mode)
+     const isTablet = window.innerWidth <= 992 && window.innerWidth > 768;
+     
+     if (isTablet) {
+         // Use setTimeout to ensure this runs after other click handlers
+         setTimeout(() => {
+             document.addEventListener('click', closeMenusOnClickOutside);
+         }, 0);
+     } else {
+         document.removeEventListener('click', closeMenusOnClickOutside);
+     }
+ }
+ 
+ // Function to close menus when clicking outside
+ function closeMenusOnClickOutside(e) {
+     // Only act if we're in tablet mode
+     if (window.innerWidth <= 992 && window.innerWidth > 768) {
+         // If the click wasn't inside a menu category
+         if (!e.target.closest('.menu-category')) {
+             // Close all categories
+             document.querySelectorAll('.menu-category').forEach(cat => {
+                 cat.classList.remove('active');
+             });
+         }
+     }
+ }
+ 
+ // Initial setup
+ setupMenuBehavior();
+ 
+ // Update on window resize
+ window.addEventListener('resize', function() {
+     // Close mobile menu when resizing to larger screens
+     if (window.innerWidth > 768) {
+         mainNav.classList.remove('active');
+         menuBackdrop.classList.remove('active');
+         document.body.style.overflow = '';
+     }
+     
+     // Update menu behavior for new viewport size
+     setupMenuBehavior();
+ });
+    
     // Add copy functionality to code blocks
     document.querySelectorAll('pre').forEach(function(codeBlock) {
         // Create copy button
@@ -134,4 +232,138 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.addEventListener('input', filterResources);
         categoryFilter.addEventListener('change', filterResources);
     }
+    
+    // ---- TABLET MENU ENHANCEMENTS ----
+    
+    // Tablet menu enhancement function
+    function enhanceTabletMenu() {
+        const isTablet = window.innerWidth <= 992 && window.innerWidth > 768;
+        const mainContent = document.querySelector('main');
+        const mainNav = document.getElementById('main-nav');
+        const menuCategories = document.querySelectorAll('.menu-category');
+        
+        // Close all submenus when switching to tablet view
+        if (isTablet) {
+            menuCategories.forEach(category => {
+                category.classList.remove('active');
+            });
+            
+            // Measure menu height and adjust main content margin if needed
+            const navHeight = mainNav.offsetHeight;
+            const viewportHeight = window.innerHeight;
+            
+            if (navHeight > viewportHeight * 0.6) {
+                mainContent.classList.add('expanded-menu-margin');
+            } else {
+                mainContent.classList.remove('expanded-menu-margin');
+            }
+        } else {
+            mainContent.classList.remove('expanded-menu-margin');
+        }
+    }
+    
+    // Call on initial load and window resize
+    enhanceTabletMenu();
+    window.addEventListener('resize', enhanceTabletMenu);
+    
+    // Add scroll position memory for the menu
+    let lastScrollPosition = 0;
+    
+    if (mainNav) {
+        mainNav.addEventListener('scroll', function() {
+            lastScrollPosition = mainNav.scrollTop;
+        });
+        
+        // Restore scroll position when switching between menus
+        document.querySelectorAll('.category-title').forEach(title => {
+            title.addEventListener('click', function() {
+                setTimeout(() => {
+                    mainNav.scrollTop = lastScrollPosition;
+                }, 10);
+            });
+        });
+    }
+
+    // Add this to your DOMContentLoaded event handler
+
+// Enhanced tablet menu functionality
+function setupTabletMenu() {
+    const isTablet = window.innerWidth <= 992 && window.innerWidth > 768;
+    const mainContent = document.querySelector('main');
+    const mainNav = document.getElementById('main-nav');
+    const menuCategories = document.querySelectorAll('.menu-category');
+    
+    // Skip if not in tablet mode
+    if (!isTablet) {
+      mainContent.classList.remove('menu-expanded');
+      return;
+    }
+    
+    // Reset all menus when entering tablet mode
+    menuCategories.forEach(category => {
+      category.classList.remove('active');
+    });
+    
+    // Add close buttons to all submenus if they don't already exist
+    menuCategories.forEach(category => {
+      const submenu = category.querySelector('.submenu');
+      if (submenu && !submenu.querySelector('.submenu-close')) {
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'submenu-close';
+        closeBtn.innerHTML = '✕';
+        closeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          category.classList.remove('active');
+        });
+        submenu.appendChild(closeBtn);
+      }
+    });
+    
+    // Handle clicks outside active menus
+    document.addEventListener('click', function(e) {
+      if (isTablet) {
+        const isClickInsideMenu = e.target.closest('.menu-category');
+        if (!isClickInsideMenu) {
+          menuCategories.forEach(category => {
+            category.classList.remove('active');
+          });
+        }
+      }
+    });
+    
+    // Enable direct click to links in submenus
+    document.querySelectorAll('.submenu a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    });
+  }
+  
+  // Call it initially and on resize
+  setupTabletMenu();
+  window.addEventListener('resize', setupTabletMenu);
+  
+  // Improve category title click handling for tablet
+  document.querySelectorAll('.category-title').forEach(title => {
+    title.addEventListener('click', function(e) {
+      const isTablet = window.innerWidth <= 992 && window.innerWidth > 768;
+      if (isTablet) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const category = this.closest('.menu-category');
+        const wasActive = category.classList.contains('active');
+        
+        // Close all other categories
+        document.querySelectorAll('.menu-category').forEach(cat => {
+          cat.classList.remove('active');
+        });
+        
+        // Toggle this category (don't open if it was already open)
+        if (!wasActive) {
+          category.classList.add('active');
+        }
+      }
+    });
+  });
 });
